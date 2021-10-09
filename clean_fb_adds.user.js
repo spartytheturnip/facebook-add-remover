@@ -1,11 +1,14 @@
 // ==UserScript==
 // @name         Remove FB Adds
-// @description  A Tampermonkey script to remove Sponsored posts from your newsfeed on Facebook.
+// @namespace    http://github.com/spartytheturnip/
 // @version      1.0
+// @description  A Tampermonkey script to remove Sponsored posts from your newsfeed on Facebook.
 // @author       spartytheturnip
 // @include      https://www.facebook.com*
 // @require      http://code.jquery.com/jquery-latest.min.js
+// @grant        none
 // ==/UserScript==
+
 var notAdds = new Set();
 
 function checkForAdds()
