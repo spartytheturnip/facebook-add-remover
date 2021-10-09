@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Remove FB Adds
 // @namespace    http://github.com/spartytheturnip/
-// @version      1.0
+// @version      1.1
 // @description  A Tampermonkey script to remove Sponsored posts from your newsfeed on Facebook.
 // @author       spartytheturnip
 // @include      https://www.facebook.com*
@@ -81,13 +81,15 @@ function findAdd()
 }
 
 function removeAdd(add) {
+    var parent;
+    var feed = document.querySelector('div[role="feed"]');
     while (true) {
         try {
-            if (add.parentNode.className.search('fbpnormal') == -1) {
-                add = add.parentNode;
-            } else {
+            parent = add.parentNode;
+            if (parent === feed) {
                 break;
             }
+            add = parent;
         } catch {
             return;
         }

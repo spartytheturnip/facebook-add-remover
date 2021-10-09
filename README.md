@@ -8,4 +8,4 @@ on your browser.
 2. Download the file "clean_fb_adds.user.js" and install in the extension or click "raw" on github after opening the file to have it automatically opened in your tapermonkey extension.
 
 **Disclaimer:**
-Due to the facebook fequently changing their sponsored post implementation this script may break at any time. This script is an approximation and may remove things that aren't adds. This was only tested on my facebook profile / browser combination it may not work on yours.
+Tested on firefox 93.0, may not work on all browsers. May stop working if facebook updates their feed logic.
